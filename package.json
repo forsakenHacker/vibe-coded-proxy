@@ -1,0 +1,18 @@
+{
+  "name": "nexus-proxy",
+  "version": "1.0.0",
+  "description": "A polished browser-in-browser proxy",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "prod": "pm2 start ecosystem.config.js",
+    "stop": "pm2 stop nexus-proxy",
+    "logs": "pm2 logs nexus-proxy"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6",
+    "cors": "^2.8.5",
+    "compression": "^1.7.4"
+  }
+}

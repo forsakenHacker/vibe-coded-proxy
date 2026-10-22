@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Browser | Ultra Polished</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active" title="Browser" data-view="browser"><i class="fas fa-globe"></i></li>
+                    <li title="Games" data-view="games"><i class="fas fa-gamepad"></i></li>
+                    <li title="History"><i class="fas fa-history"></i></li>
+                    <li title="Bookmarks"><i class="fas fa-bookmark"></i></li>
+                    <li title="Settings"><i class="fas fa-cog"></i></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-avatar">
+                    <img src="https://core-normal.traeapi.us/api/ide/v1/text_to_image?prompt=cool%20futuristic%20avatar%20icon&image_size=square" alt="User">
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Browser Header -->
+            <header class="browser-header">
+                <div class="tabs-container">
+                    <div class="tab active">
+                        <i class="fas fa-globe"></i>
+                        <span>New Tab</span>
+                        <i class="fas fa-times close-tab"></i>
+                    </div>
+                    <button class="add-tab"><i class="fas fa-plus"></i></button>
+                </div>
+                
+                <div class="toolbar">
+                    <div class="controls">
+                        <button id="home-btn" title="Home"><i class="fas fa-home"></i></button>
+                        <button id="back-btn"><i class="fas fa-arrow-left"></i></button>
+                        <button id="forward-btn"><i class="fas fa-arrow-right"></i></button>
+                        <button id="refresh-btn"><i class="fas fa-redo"></i></button>
+                    </div>
+                    
+                    <div class="address-bar-container">
+                        <i class="fas fa-shield-alt secure-icon"></i>
+                        <input type="text" id="url-input" placeholder="Search the decentralized web..." value="">
+                        <button id="go-btn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+
+                    <div class="utility-controls">
+                        <button id="fullscreen-btn" title="Fullscreen Viewport"><i class="fas fa-expand"></i></button>
+                        <button title="Extensions"><i class="fas fa-puzzle-piece"></i></button>
+                        <button title="Downloads"><i class="fas fa-download"></i></button>
+                        <button title="Menu"><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Browser Viewport -->
+            <div class="viewport-container">
+                <div class="loading-bar" id="loading-bar"></div>
+                <iframe id="browser-frame" src="about:blank" frameborder="0"></iframe>
+                
+                <!-- Games Portal -->
+                <div id="games-portal" class="games-portal hidden">
+                    <div class="portal-header">
+                        <h2>Nexus Gaming Hub</h2>
+                        <p>Classic Arcades & Modern Hits</p>
+                    </div>
+                    <div class="games-grid">
+                        <!-- Games will be injected here -->
+                    </div>
+                </div>
+
+                <!-- Welcome Overlay -->
+                <div id="welcome-overlay" class="welcome-overlay">
+                    <div class="welcome-content">
+                        <h1>Nexus Proxy</h1>
+                        <p>Experience the web, redefined.</p>
+                        <div class="quick-links">
+                            <button class="quick-link" data-url="https://www.google.com/search?q=trae">Google</button>
+                            <button class="quick-link" data-url="https://www.wikipedia.org">Wikipedia</button>
+                            <button class="quick-link" data-url="https://github.com">GitHub</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
